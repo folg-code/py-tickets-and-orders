@@ -2,8 +2,11 @@ from typing import Union
 from datetime import datetime
 from django.db import transaction
 from django.db.models import QuerySet
+from django.contrib.auth import get_user_model
 
-from db.models import Order, Ticket, User, MovieSession
+from db.models import Order, Ticket, MovieSession
+
+User = get_user_model()
 
 
 def create_order(
